@@ -4,7 +4,7 @@
     id        = "com.phonegap.example"
     version   = "3.0.0">
 
-<name>GuestPortal3</name>
+<name>GuestPortal4 Beta1</name>
 
 <content src="index.html"/>
 

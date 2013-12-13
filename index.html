@@ -418,7 +418,8 @@ p {
 <div data-role="page" id="page_brussels" data-add-back-btn="true">
         <script type="text/javascript">
             $("#page_brussels").live('pagebeforecreate', function() {
-    $.get('http://190.145.24.146/app/cuenta.php',function(data){
+				var p_fol2 = localStorage.getItem("foliodb");
+    $.get('http://190.145.24.146/app/cuenta.php',{folio: p_fol2},function(data){
                 $('.content').empty();
                 $(data).find('market').each(function(){
                     var $market = $(this);
