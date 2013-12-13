@@ -87,7 +87,9 @@ p {
 												localStorage.setItem("salidadb", sal_db);
 												localStorage.setItem("llegadadb", lle_db);					
 						console.log("logeado Sr" + nom_db);
-						document.location.href = "#markets";
+						location.reload();
+						document.location = "index.html#markets";
+						//document.location.href = "#markets";
                     } else {
 						console.log("loggin failed" + pass);
                         $.mobile.changePage("fail.html");
