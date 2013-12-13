@@ -87,9 +87,7 @@ p {
 												localStorage.setItem("salidadb", sal_db);
 												localStorage.setItem("llegadadb", lle_db);					
 						console.log("logeado Sr" + nom_db);
-						location.reload();
-						document.location = "index.html#markets"
-						//document.location.href = "#markets";
+						document.location.href = "#markets";
                     } else {
 						console.log("loggin failed" + pass);
                         $.mobile.changePage("fail.html");
@@ -122,7 +120,7 @@ p {
 	  
 						var nom = localStorage.getItem("nombredb");
 
-   $("#saludo span").html('Sr(a) '+nom_db);
+   $("#saludo span").html('Sr(a) '+nom);
 
    </script>
    </tr>
@@ -353,14 +351,14 @@ p {
          <tr>
            <td align="left"><div id="p_nombre">
             <p><strong>NOMBRE</strong> <span></span></p></div> </td> </tr>       
-                      <script>var p_nom = localStorage.getItem("nombredb");$("#p_nombre span").html(': '+nom_db);</script>
+                      <script>var p_nom = localStorage.getItem("nombredb");$("#p_nombre span").html(': '+p_nom);</script>
             <tr>
               <td align="left"><div id="p_fol">
                <p><strong>No FOLIO</strong> <span></span></p></div></td> </tr>         
-                      <script>var p_fol = localStorage.getItem("foliodb");$("#p_fol span").html(': '+fol_db);</script>
+                      <script>var p_fol = localStorage.getItem("foliodb");$("#p_fol span").html(': '+p_fol);</script>
             <tr>
               <td align="left"><div id="p_lle"><p><strong>CHECKin DATE</strong> <span></span></p></div></td>
-   </tr>          <script>var p_lle = localStorage.getItem("llegadadb");$("#p_lle span").html(': '+lle_db);</script>
+   </tr>          <script>var p_lle = localStorage.getItem("llegadadb");$("#p_lle span").html(': '+p_lle);</script>
    <tr>
      <td align="left"><div id="p_sal">
                <p><strong>CHECKout DATE</strong> <span></span></p></div></td> </tr>
