@@ -42,6 +42,7 @@ p {
      <td><br><br><img src="images/lancaster1.png" width="90" height="110"><img src="images/titulohotel.png"><br>
        <div id="saludo">
         <p>Bienvenido apreciado Sr(a)<span></span></p></div>
+       <script>var saludo = localStorage.getItem("nombredb");$("#saludo span").html(': '+saludo);</script>
          <p>El hotel le desea un agradable y placida estad&iacute;a, <br />porfavor navegue en los menus de la aplicaci&oacute;n en donde <br />encontrara diversos servicios que el hotel tiene preparados para usted.</p><br><a href="#info_hotel" data-role="button">Información del Hotel</a>
         </td>
    </tr>
@@ -247,11 +248,15 @@ p {
          <tr>
            <td align="left"><div id="p_nombre">
             <p><strong>NOMBRE</strong> <span></span></p></div> </td> </tr>       
-                      <script>var p_nom = localStorage.getItem("password");$("#p_nombre span").html(': '+p_nom);</script>
+                      <script>var p_nom = localStorage.getItem("nombredb");$("#p_nombre span").html(': '+p_nom);</script>
             <tr>
               <td align="left"><div id="p_fol">
                <p><strong>No FOLIO</strong> <span></span></p></div></td> </tr>         
-                      <script>var p_fol = localStorage.getItem("username");$("#p_fol span").html(': '+p_fol);</script>
+                      <script>var p_fol = localStorage.getItem("foliodb");$("#p_fol span").html(': '+p_fol);</script>
+			<tr>
+              <td align="left"><div id="p_fol">
+               <p><strong>No Habitaci&oacute;n</strong> <span></span></p></div></td> </tr>         
+                      <script>var p_fol = localStorage.getItem("roomdb");$("#p_fol span").html(': '+p_fol);</script>                      
             <tr>
               <td align="left"><div id="p_lle"><p><strong>CHECKin DATE</strong> <span></span></p></div></td>
    </tr>          <script>var p_lle = localStorage.getItem("llegadadb");$("#p_lle span").html(': '+p_lle);</script>
@@ -320,7 +325,9 @@ p {
 <div data-role="page" id="page_brussels" data-add-back-btn="true">
         <script type="text/javascript">
             $("#page_brussels").live('pagebeforecreate', function() {
-    $.get('http://190.145.24.146/app/cuenta.php',function(data){
+				var p_fol2 = localStorage.getItem("foliodb");
+				var p_lleg2 = localStorage.getItem("llegadadb");
+    $.get('http://190.145.24.146/app/cuenta.php',{folio: p_fol2, llegada: p_lleg2 },function(data){
                 $('.content').empty();
                 $(data).find('market').each(function(){
                     var $market = $(this);
@@ -366,7 +373,7 @@ p {
 
 <div data-role="page" id="chat" data-add-back-btn="true">
         <script type="text/javascript">
-            $("#page_all").live('pagebeforecreate', function() {
+            $("#chat").live('pagebeforecreate', function() {
     $.get('http://190.145.24.146/app/chat.php',function(data){
                 $('.content').empty();
                 $(data).find('market').each(function(){
