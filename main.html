@@ -142,19 +142,19 @@ p {
     <div data-role="collapsible-set">
     <div id="result2">
     <div ><table width="100%" border="0" cellspacing="0" cellpadding="1"  >
-   <tr>
-      <td align="center" ><a href="#printspot" data-role="button"><strong><p>IMPRESI&Oacute;N REM&Oacute;TA</p></strong></a></td>
-   </tr>
-      <tr>
-      <td align="center" ><a href="#vuelos" data-role="button"><strong><p>INTINERARIO DE VUELOS</p></strong></a></td>
-   </tr>
-      <tr>
+   <tr><br>
+      <td align="center" ><a href="#hospitality" data-role="button"><strong><p>&Uacute;TILIDADES DE ESTAD&Iacute;A</p></strong></a></td>
+   <br></tr>
+   <tr><br>
+      <td align="center" ><a href="#" onclick="window.open('http://wifienter.com/wifi/webprint.php', '_blank', 'location=yes');" data-role="button" ><strong><p>IMPRESI&Oacute;N REM&Oacute;TA</p></strong></a></td>
+   <br></tr>
+      <tr><br>
+      <td align="center" ><a href="#" onclick="window.open('http://www.conrac.co/BOG/dep_dom_eng.php5?x=1377079795', '_blank', 'location=yes');" data-role="button" ><strong><p>INTINERARIO DE VUELOS LOCALES</p></strong></a></td>
+   <br></tr>
+      <tr><br>
       <td align="center" ><a href="#clima" data-role="button"><strong><p>ESTADO DEL CLIMA</p></strong></a></td>
-   </tr>
-      <tr>
-      <td align="center" ><a href="#" data-role="button"><strong><p>RECOMENDADOS</p></strong></a></td>
-   </tr>
-</table>
+   <br></tr>
+      </table>
 </table>
 </div>
     </div>    
@@ -172,30 +172,6 @@ p {
 </table>
 </div>    
 </div>
-<div data-role="page" id="printspot" data-add-back-btn="true">
-    <div data-role="header">
-<table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
-   <tr>
-      <td height="32"><img src="images/logo_small.png" width="120" height="40"></td>
-   </tr>
-</table>
-    </div>
-    <div data-role="content">
-        <iframe src="http://www.wifienter.com/autoprint/print.php"></iframe>
-    </div>
-</div>
-<div data-role="page" id="vuelos" data-add-back-btn="true">
-    <div data-role="header">
-<table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
-   <tr>
-      <td height="32"><img src="images/logo_small.png" width="120" height="40"></td>
-   </tr>
-</table>
-    </div>
-    <div data-role="content">
-        <iframe src="http://www.conrac.co/BOG/dep_dom_eng.php5?x=1377079795"></iframe>
-    </div>
-</div>
 <div data-role="page" id="tiempo" data-add-back-btn="true">
     <div data-role="header">
 <table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
@@ -205,33 +181,9 @@ p {
 </table>
     </div>
     <div data-role="content">
-         </div>
+    <iframe src="http://wifienter.net/101park/clima.html" style="width:100px; height:100px;">
 </div>
 <div data-role="page" id="page_osi" data-add-back-btn="true">
-        <script type="text/javascript">
-            $("#page_osi").live('pagebeforecreate', function() {
-            $.get('http://190.145.24.146/app/testoi.php',function(data){
-                $('.content').empty();
-                $(data).find('huesped').each(function(){
-                    var $market = $(this);
-                    var html = '<div class="data">';                      
-                    html += '<div data-role="collapsible" data-collapsed="true" data-theme="b"><h3>' + $market.attr('room') + '</h3>';
-                    
-                    html += '<div data-role="collapsible" data-collapsed="true"><h3>ID</h3>';
-                    html += '<div class="ui-grid-b">';
-                    html += '<div class="ui-block-a grid-title">Head</div>';
-                    html += '<div class="ui-block-a">' + $market.find('id').attr('registro') + '</div>';                    
-                    html += '</div></div>';
-                    
-                
-                    
-                    html += '</div></div>';
-                    $('#result3').append(html).trigger( "create" );
-                    $('#result3 .loading').remove();
-                });                           
-            });
-            });
-        </script>
     <div data-role="header">
         <table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
    <tr>
@@ -426,5 +378,111 @@ p {
     </div>               
     </div>
 </div>
+<div data-role="header">
+  <table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
+   <tr>
+      <td height="32"><img src="images/logo_small.png" width="120" height="40"></td>
+   </tr>
+</table>
+    </div>
+<div data-role="page" id="hospitality" data-add-back-btn="true">
+<div data-role="content">
+		<div class="content-primary">
+
+		<form action="#markets">
+
+			<h2>Preferencias en su Estad&iacute;a</h2>
+
+			<p>Aqui podr&aacute; ajustar los servicios que el hotel le presta personalizando nuestra atenci&oacute;n y ajustandola a sus necesidades particulares.</p>
+			
+			<div data-role="fieldcontain">
+	         <label for="name">Saludaci&oacute;n deseada:</label>
+	         <input type="text" name="name" id="name" value=""  />
+			</div>
+
+			<div data-role="fieldcontain">
+			<label for="textarea">Comentario personal:</label>
+			<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="slider2">Desea limpieza a la habitaci&oacute;?:</label>
+				<select name="slider2" id="slider2" data-role="slider">
+					<option value="off">No</option>
+					<option value="on">Si</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="slider">N&uacute;mero de Toallas deseadas:</label>
+			 	<input type="range" name="slider" id="slider" value="5" min="0" max="100" data-highlight="true"  />
+			</div>
+
+			<div data-role="fieldcontain">
+			<fieldset data-role="controlgroup">
+				<legend>Elija que snacks le gustar&iacute;n en su minibar:</legend>
+				<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
+				<label for="checkbox-1a">Papas Fritas</label>
+
+				<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
+				<label for="checkbox-2a">Pasa bocas</label>
+
+				<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
+				<label for="checkbox-3a">Bebidas</label>
+
+				<input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" />
+				<label for="checkbox-4a">Licores</label>
+		    </fieldset>
+			</div>
+
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup">
+			    	<legend>Elija la temperatura deseada:</legend>
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+			         	<label for="radio-choice-1">Alta</label>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+			         	<label for="radio-choice-2">Media</label>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+			         	<label for="radio-choice-3">Enfriar</label>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4"  />
+			         	<label for="radio-choice-4">&Aacute;mbiente</label>
+			    </fieldset>
+			</div>
+
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+			     	<legend>Desea recibir llamadas?:</legend>
+			         	<input type="radio" name="radio-choice-b" id="radio-choice-c" value="on" checked="checked" />
+			         	<label for="radio-choice-c">Si</label>
+			         	<input type="radio" name="radio-choice-b" id="radio-choice-d" value="off" />
+			         	<label for="radio-choice-d">No</label>
+			         	<input type="radio" name="radio-choice-b" id="radio-choice-e" value="other" />
+			         	<label for="radio-choice-e">Solo Urgencias</label>
+			    </fieldset>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="select-choice-1" class="select">Almohadas adicionales:</label>
+				<select name="select-choice-1" id="select-choice-1">
+					<option value="standard">1</option>
+					<option value="rush">2</option>
+					<option value="express">3</option>
+					<option value="overnight">4</option>
+				</select>
+			</div>
+
+		<div class="ui-body ui-body-b">
+		<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="d">Cancelar</button></div>
+				<div class="ui-block-b"><button type="submit" data-theme="a">Enviar Preferencias</button></div>
+	    </fieldset>
+		</div>
+	</form>
+	</div>
+    </div>
+    </div>
 </body>
 </html>
