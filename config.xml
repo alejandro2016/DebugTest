@@ -4,7 +4,7 @@
     id        = "com.phonegap.example"
     version   = "3.0.0">
 
-<name>GuestPortal4 Beta2</name>
+<name>GuestPortal4 Beta3</name>
 
 <content src="index.html"/>
 
@@ -25,5 +25,6 @@ TravelMedia - By Alejandro Osorio 2013
 <access origin="http://190.145.24.146" browserOnly="true" />
 <access origin="http://wifienter.net" browserOnly="true" />
 <access origin="*" browserOnly="true" />
+<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
 
 </widget>
