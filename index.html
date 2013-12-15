@@ -159,7 +159,7 @@ $(function(){
 //            $(html).find('market').each(function(){
 			//var market = $(this);
 			 //var room = market.attr('room');
-				if (respuesta.room != "" && respuesta.room != "Login Failed") {
+				if (respuesta.room != null && respuesta.room != "Login Failed") {
                         var hab_db = respuesta.room;
 						var nom_db = respuesta.nombre;
 						var fol_db = respuesta.folio;
@@ -215,7 +215,7 @@ En Lancaster House estamos comprometidos con la protecci&oacute;n integral de ni
     	<div class="swiper-slide">
         <table width="100%" height="271" border="0" cellspacing="0" cellpadding="2" >
    <tr>
-     <td><img src="images/h_restaurantes.png" width="100%" height="271">
+     <td><img src="images/h_restaurante.png" width="100%" height="271">
          </td>
    </tr>
    </table>
