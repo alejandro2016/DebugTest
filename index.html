@@ -27,9 +27,40 @@ p {
 <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
 <link rel="stylesheet" href="idangerous.swiper.css">
 <script defer src="idangerous.swiper-2.4.min.js"></script>
+<script type="text/javascript">
+/*======
+Use document ready or window load events
+For example:
+With jQuery: $(function() { ...code here... })
+Or window.onload = function() { ...code here ...}
+Or document.addEventListener('DOMContentLoaded', function(){ ...code here... }, false)
+=======*/
+
+window.onload = function() {
+  var mySwiper = new Swiper('.swiper-container',{
+    //Your options here:
+    mode:'horizontal',
+    loop: true
+    //etc..
+  });  
+}
+
+/*
+Or with jQuery/Zepto
+*/
+$(function(){
+  var mySwiper = $('.swiper-container').swiper({
+    //Your options here:
+    mode:'horizontal',
+    loop: true
+    //etc..
+  });
+})
+
+</script>
 </head> 
 <body>
-<div id="page" data-role="page">
+<div id="homex" data-role="page">
 	<div data-role="header">
 		<table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
    <tr>
@@ -57,7 +88,7 @@ p {
 	         <td align="left"><p>Para iniciar porfavor ingrese el c&oacute;digo correspondiente a su hotel :<br><br></p></td>
           </tr></div>
 	      <tr>
-	         <td align="center"><input type="text" value="" placeholder="C&oacute;digo Hotel"  data-clear-btn="true" size="12" ></td>
+	         <td align="center"><input type="text" value="" placeholder="C&oacute;digo Hotel" size="12" ></td>
           </tr>
           	      <div align="right"><tr>
 	         <td align="right">Si no tiene ya el c&oacute;digo correspondiente a su hotel, porfavor solicitelo en recepci&oacute;n</td>
@@ -71,7 +102,7 @@ p {
 	   </div>
 </div>
 
-<div data-role="page" id="login">
+<div data-role="page" id="page">
 	<div data-role="header2">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/top1.png">
    <tr>
