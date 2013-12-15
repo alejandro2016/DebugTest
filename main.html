@@ -140,8 +140,7 @@ p {
     <div data-role="content" class="target">
     
     <div data-role="collapsible-set">
-    <div id="result2">
-    <div ><table width="100%" border="0" cellspacing="0" cellpadding="1"  >
+    <table width="100%" border="0" cellspacing="0" cellpadding="1"  >
    <tr><br>
       <td align="center" ><a href="#hospitality" data-role="button"><strong><p>&Uacute;TILIDADES DE ESTAD&Iacute;A</p></strong></a></td>
    <br></tr>
@@ -152,13 +151,12 @@ p {
       <td align="center" ><a href="#" onclick="window.open('http://www.conrac.co/BOG/dep_dom_eng.php5?x=1377079795', '_blank', 'location=yes');" data-role="button" ><strong><p>INTINERARIO DE VUELOS LOCALES</p></strong></a></td>
    <br></tr>
       <tr><br>
-      <td align="center" ><a href="#clima" data-role="button"><strong><p>ESTADO DEL CLIMA</p></strong></a></td>
+      <td align="center" ><a href="#" onclick="window.open('http://wifienter.net/101park/clima.html', '_blank', 'location=yes');" data-role="button" ><strong><p>ESTADO DEL CLIMA</p></strong></a></td>
    <br></tr>
       </table>
 </table>
 </div>
-    </div>    
-    </div> 
+     
     </div>
 <div data-role="footer" data-position="fixed"> 
 <table width="100%" height="50px" border="0" cellspacing="0" cellpadding="0" background="images/fondo.jpg" >
@@ -172,18 +170,7 @@ p {
 </table>
 </div>    
 </div>
-<div data-role="page" id="clima" data-add-back-btn="true">
-    <div data-role="header">
-<table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
-   <tr>
-      <td height="32"><img src="images/logo_small.png" width="120" height="40"></td>
-   </tr>
-</table>
-    </div>
-    <div data-role="content">
-    <iframe src='http://wifienter.net/101park/clima.html'>
-</div>
-</div>
+
 <div data-role="page" id="page_osi" data-add-back-btn="true">
     <div data-role="header">
         <table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
@@ -234,12 +221,7 @@ p {
 
 <div data-role="page" id="page_embrun" data-add-back-btn="true">
         <script type="text/javascript">
-            $("#page_embrun").live('pagebeforecreate', function() {
-            $.get('http://ontariosheep.org/mobile/data/data_embrun.php',function(data){
-                alert("Debe Registrarse en GuestPortal para opetener aplicaciones adicionales y configurar su aplicaci&oacute;n");                   
-            });
-            });
-        </script>
+            alert("Debe Registrarse en GuestPortal para opetener aplicaciones adicionales y configurar su app");        </script>
     <div data-role="header">
         <table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
    <tr>
@@ -249,13 +231,12 @@ p {
     </div>
     <div data-role="content">
     
-    <div data-role="collapsible-set">
-    <div id="result4">
-    <div class="loading"><table width="100%" height="50px" border="0" cellspacing="0">
+     <div class="loading"><table width="100%" height="50px" border="0" cellspacing="0">
    <tr>
       <td align="center"  ><p>Cargando Configuraciones...</td>
    </tr>
 </table>
+</div>
 </div>
 <div data-role="footer" data-position="fixed"> 
 <table width="100%" height="50px" border="0" cellspacing="0" cellpadding="0" background="images/fondo.jpg" >
@@ -268,11 +249,8 @@ p {
    </tr>
 </table>
 </div>
-    </div>    
-    </div>        
+  </div>        
                 
-    </div>
-</div>
 
 <div data-role="page" id="page_brussels" data-add-back-btn="true">
         <script type="text/javascript">
@@ -379,6 +357,8 @@ p {
     </div>               
     </div>
 </div>
+
+<div data-role="page" id="hospitality" data-add-back-btn="true">
 <div data-role="header">
   <table width="100%" height="50px" border="0" cellspacing="0" background="images/top1.png">
    <tr>
@@ -386,10 +366,7 @@ p {
    </tr>
 </table>
     </div>
-<div data-role="page" id="hospitality" data-add-back-btn="true">
 <div data-role="content">
-		<div class="content-primary">
-
 		<form action="#markets">
 
 			<h2>Preferencias en su Estad&iacute;a</h2>
@@ -480,10 +457,8 @@ p {
 				<div class="ui-block-a"><button type="submit" data-theme="d">Cancelar</button></div>
 				<div class="ui-block-b"><button type="submit" data-theme="a">Enviar Preferencias</button></div>
 	    </fieldset>
-		</div>
-	</form>
+		</form>
 	</div>
-    </div>
     </div>
 </body>
 </html>
